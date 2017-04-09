@@ -10,7 +10,7 @@ namespace DAL
 {
     public class Account
     {
-        public users Login(string name,string pwd)
+        public users Login(string name, string pwd)
         {
             try
             {
@@ -25,21 +25,38 @@ namespace DAL
             {
                 return null;
             }
-           
+
         }
 
-        public users Add(string name, string pwd,string nickname="")
+        public users Add(string name, string pwd, string nickname = "")
         {
             try
             {
                 using (var edm = new appEntities())
                 {
                     pwd = pwd.ToMD5();
-                    var model = new users(){ UserName=name,PWd=pwd,NickName=nickname,CreateTime=DateTime.Now,Type=3};
+                    var model = new users() { UserName = name, PWd = pwd, NickName = nickname, CreateTime = DateTime.Now, Type = 3 };
                     edm.users.Add(model);
                     edm.SaveChanges();
                     return model;
                 }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<users> GetUserList()
+        {
+            try
+            {
+                using (var edm = new appEntities())
+                {
+                    var users = edm.users.Where(p => p.Type > 0).ToList();
+                    return users;
+                }
+
             }
             catch (Exception ex)
             {

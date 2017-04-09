@@ -15,8 +15,14 @@ namespace Client.Models
             get { return HttpContext.Current.Session["user_name"].ObjToString(); }
             set { HttpContext.Current.Session["user_name"] = value; }
         }
+        public static String UserNickName
+        {
 
-        public static long UserID
+
+            get { return HttpContext.Current.Session["user_nick_name"].ObjToString(); }
+            set { HttpContext.Current.Session["user_nick_name"] = value; }
+        }
+        public static int UserID
         {
             get { return HttpContext.Current.Session["user_id"].ObjToInt(); }
             set { HttpContext.Current.Session["user_id"] = value; }
