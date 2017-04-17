@@ -5,6 +5,25 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="appModels.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="customerinfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="sex" Type="varchar" MaxLength="10" />
+          <Property Name="ismarr" Type="varchar" MaxLength="10" />
+          <Property Name="cardNo" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="500" />
+          <Property Name="workunit" Type="varchar" MaxLength="500" />
+          <Property Name="workaddress" Type="varchar" MaxLength="500" />
+          <Property Name="job" Type="varchar" MaxLength="100" />
+          <Property Name="phone" Type="varchar" MaxLength="50" />
+          <Property Name="createTime" Type="datetime" />
+          <Property Name="detail" Type="varchar" MaxLength="5000" />
+          <Property Name="user" Type="varchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+        </EntityType>
         <EntityType Name="users">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,6 +36,7 @@
           <Property Name="Type" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="appModelsStoreContainer">
+          <EntitySet Name="customerinfo" EntityType="Self.customerinfo" Schema="appdb" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="appdb" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -25,6 +45,7 @@
       <Schema Namespace="appModels" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="appEntities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="users" EntityType="appModels.users" />
+          <EntitySet Name="customerinfo" EntityType="appModels.customerinfo" />
         </EntityContainer>
         <EntityType Name="users">
           <Key>
@@ -36,6 +57,25 @@
           <Property Name="NickName" Type="String" />
           <Property Name="CreateTime" Type="DateTime" />
           <Property Name="Type" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="customerinfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" />
+          <Property Name="sex" Type="String" />
+          <Property Name="ismarr" Type="String" />
+          <Property Name="cardNo" Type="String" />
+          <Property Name="address" Type="String" />
+          <Property Name="workunit" Type="String" />
+          <Property Name="workaddress" Type="String" />
+          <Property Name="job" Type="String" />
+          <Property Name="phone" Type="String" />
+          <Property Name="createTime" Type="DateTime" />
+          <Property Name="detail" Type="String" />
+          <Property Name="user" Type="String" />
+          <Property Name="userId" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -52,6 +92,26 @@
                 <ScalarProperty Name="PWd" ColumnName="PWd" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customerinfo">
+            <EntityTypeMapping TypeName="appModels.customerinfo">
+              <MappingFragment StoreEntitySet="customerinfo">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="detail" ColumnName="detail" />
+                <ScalarProperty Name="createTime" ColumnName="createTime" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="job" ColumnName="job" />
+                <ScalarProperty Name="workaddress" ColumnName="workaddress" />
+                <ScalarProperty Name="workunit" ColumnName="workunit" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="cardNo" ColumnName="cardNo" />
+                <ScalarProperty Name="ismarr" ColumnName="ismarr" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -37,13 +37,14 @@ namespace Client.Controllers
         {
             return _Json(new { ID = UserState.UserID, NickName = UserState.UserNickName, UserName = UserState.UserName });
         }
+        [Login(type = "admin")]
         public JsonResult AddUser(string name, string pwd,string nickname)
         {
             var result = new Account().Add(name, pwd, nickname);
             return _Json(result, result == null ? -100 : 0);
         }
 
-        [Login]
+        [Login(type = "admin")]
         public JsonResult UserList()
         {
             var res = new Account().GetUserList();
@@ -59,5 +60,9 @@ namespace Client.Controllers
             return _Json(null, -110, "未登陆");
         }
 
+        public JsonResult noRole()
+        {
+            return _Json(null, -100, "无权限");
+        }
     }
 }

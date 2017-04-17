@@ -13,5 +13,25 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="customerinfo">
+      <EntityTypeMapping TypeName="appModels.customerinfo">
+        <MappingFragment StoreEntitySet="customerinfo">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="workaddress" ColumnName="workaddress" />
+          <ScalarProperty Name="workunit" ColumnName="workunit" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="cardNo" ColumnName="cardNo" />
+          <ScalarProperty Name="ismarr" ColumnName="ismarr" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

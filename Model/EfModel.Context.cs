@@ -26,5 +26,6 @@ namespace Model
         }
     
         public DbSet<users> users { get; set; }
+        public DbSet<customerinfo> customerinfo { get; set; }
     }
 }

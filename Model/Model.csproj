@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="customerinfo.cs">
+      <DependentUpon>EfModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EfModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
