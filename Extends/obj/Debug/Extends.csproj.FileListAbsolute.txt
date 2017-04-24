@@ -2,3 +2,4 @@ D:\Work\telala\TelalaServer\Extends\bin\Debug\Extends.dll
 D:\Work\telala\TelalaServer\Extends\bin\Debug\Extends.pdb
 D:\Work\telala\TelalaServer\Extends\obj\Debug\Extends.dll
 D:\Work\telala\TelalaServer\Extends\obj\Debug\Extends.pdb
+D:\Work\telala\TelalaServer\Extends\obj\Debug\Extends.csprojResolveAssemblyReference.cache

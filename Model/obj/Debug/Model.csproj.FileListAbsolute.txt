@@ -6,3 +6,4 @@ D:\Work\telala\TelalaServer\Model\bin\Debug\EntityFramework.xml
 D:\Work\telala\TelalaServer\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\Work\telala\TelalaServer\Model\obj\Debug\Model.dll
 D:\Work\telala\TelalaServer\Model\obj\Debug\Model.pdb
+D:\Work\telala\TelalaServer\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

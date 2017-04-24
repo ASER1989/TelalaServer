@@ -35,7 +35,7 @@ namespace Client.Controllers
         [Login]
         public JsonResult GetUserInfo()
         {
-            return _Json(new { ID = UserState.UserID, NickName = UserState.UserNickName, UserName = UserState.UserName });
+            return _Json(new { ID = UserState.UserID,Type=UserState.UserType, NickName = UserState.UserNickName, UserName = UserState.UserName });
         }
         [Login(type = "admin")]
         public JsonResult AddUser(string name, string pwd,string nickname)
