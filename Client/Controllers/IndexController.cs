@@ -29,7 +29,7 @@ namespace Client.Controllers
                 UserState.UserNickName = result.NickName;
             }
              
-            return _Json(result, result == null ? -100 : 0);
+            return _Json(result, result == null ? -99 : 0,result==null?"用户名密码错误":"操作成功");
         }
 
         [Login]

@@ -1,0 +1,5 @@
+D:\Work\telala\TelalaServer\Extends\bin\Release\Extends.dll
+D:\Work\telala\TelalaServer\Extends\bin\Release\Extends.pdb
+D:\Work\telala\TelalaServer\Extends\obj\Release\Extends.csprojResolveAssemblyReference.cache
+D:\Work\telala\TelalaServer\Extends\obj\Release\Extends.dll
+D:\Work\telala\TelalaServer\Extends\obj\Release\Extends.pdb

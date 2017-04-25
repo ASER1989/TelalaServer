@@ -1,0 +1,9 @@
+D:\Work\telala\TelalaServer\Model\bin\Release\Model.dll.config
+D:\Work\telala\TelalaServer\Model\bin\Release\Model.dll
+D:\Work\telala\TelalaServer\Model\bin\Release\Model.pdb
+D:\Work\telala\TelalaServer\Model\bin\Release\EntityFramework.dll
+D:\Work\telala\TelalaServer\Model\bin\Release\EntityFramework.xml
+D:\Work\telala\TelalaServer\Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Work\telala\TelalaServer\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Work\telala\TelalaServer\Model\obj\Release\Model.dll
+D:\Work\telala\TelalaServer\Model\obj\Release\Model.pdb

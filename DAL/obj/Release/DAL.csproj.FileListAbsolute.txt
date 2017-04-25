@@ -1,0 +1,15 @@
+D:\Work\telala\TelalaServer\DAL\bin\Release\DAL.dll.config
+D:\Work\telala\TelalaServer\DAL\bin\Release\DAL.dll
+D:\Work\telala\TelalaServer\DAL\bin\Release\DAL.pdb
+D:\Work\telala\TelalaServer\DAL\bin\Release\EntityFramework.dll
+D:\Work\telala\TelalaServer\DAL\bin\Release\Extends.dll
+D:\Work\telala\TelalaServer\DAL\bin\Release\Model.dll
+D:\Work\telala\TelalaServer\DAL\bin\Release\MySql.Data.Entity.EF6.dll
+D:\Work\telala\TelalaServer\DAL\bin\Release\Extends.pdb
+D:\Work\telala\TelalaServer\DAL\bin\Release\Model.pdb
+D:\Work\telala\TelalaServer\DAL\bin\Release\EntityFramework.xml
+D:\Work\telala\TelalaServer\DAL\bin\Release\MySql.Data.Entity.EF6.xml
+D:\Work\telala\TelalaServer\DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Work\telala\TelalaServer\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\Work\telala\TelalaServer\DAL\obj\Release\DAL.dll
+D:\Work\telala\TelalaServer\DAL\obj\Release\DAL.pdb

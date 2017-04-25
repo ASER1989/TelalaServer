@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="appModelsStoreContainer" CdmEntityContainer="appEntities">
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="appModels.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="PWd" ColumnName="PWd" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customerinfo">
+      <EntityTypeMapping TypeName="appModels.customerinfo">
+        <MappingFragment StoreEntitySet="customerinfo">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="user" ColumnName="user" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="workaddress" ColumnName="workaddress" />
+          <ScalarProperty Name="workunit" ColumnName="workunit" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="cardNo" ColumnName="cardNo" />
+          <ScalarProperty Name="ismarr" ColumnName="ismarr" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
