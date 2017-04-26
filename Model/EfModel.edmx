@@ -23,6 +23,8 @@
           <Property Name="detail" Type="varchar" MaxLength="5000" />
           <Property Name="user" Type="varchar" MaxLength="50" />
           <Property Name="userId" Type="int" />
+          <Property Name="isdel" Type="int" />
+          <Property Name="delInfo" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="users">
           <Key>
@@ -76,6 +78,8 @@
           <Property Name="detail" Type="String" />
           <Property Name="user" Type="String" />
           <Property Name="userId" Type="Int32" />
+          <Property Name="isdel" Type="Int32" />
+          <Property Name="delInfo" Type="String" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -98,6 +102,8 @@
           <EntitySetMapping Name="customerinfo">
             <EntityTypeMapping TypeName="appModels.customerinfo">
               <MappingFragment StoreEntitySet="customerinfo">
+                <ScalarProperty Name="delInfo" ColumnName="delInfo" />
+                <ScalarProperty Name="isdel" ColumnName="isdel" />
                 <ScalarProperty Name="userId" ColumnName="userId" />
                 <ScalarProperty Name="user" ColumnName="user" />
                 <ScalarProperty Name="detail" ColumnName="detail" />

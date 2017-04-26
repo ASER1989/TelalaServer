@@ -45,9 +45,38 @@ namespace Client.Controllers
             catch (Exception)
             { 
                 return _Json(null, -100, "系统错误");
-            }
-            
+            } 
+        }
 
+        [Login(type = "admin")]
+        public JsonResult DelCustomer(int id)
+        {
+            try
+            {
+                var bll = new Customer();
+                bll.DelCustomer(id);
+                return _Json(null,0, "操作成功");
+            }
+            catch (Exception)
+            {
+                return _Json(null, -100, "系统错误");
+            } 
+        }
+
+        [Login]
+        public JsonResult GetListBuyUser(int page = 1, int size = 100)
+        {
+            try
+            {
+                var bll = new Customer();
+                var data = bll.GetListByUser(UserState.UserID, page, size);
+                var count = bll.GetCount(UserState.UserID);
+                return _Json(new { list = data, count = (count + 100 - 1) / size }, 0, "操作成功");
+            }
+            catch (Exception)
+            {
+                return _Json(null, -100, "系统错误");
+            } 
         }
 
     }

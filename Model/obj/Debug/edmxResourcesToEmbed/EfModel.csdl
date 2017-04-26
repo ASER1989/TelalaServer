@@ -33,5 +33,7 @@
     <Property Name="detail" Type="String" />
     <Property Name="user" Type="String" />
     <Property Name="userId" Type="Int32" />
+    <Property Name="isdel" Type="Int32" />
+    <Property Name="delInfo" Type="String" />
   </EntityType>
 </Schema>

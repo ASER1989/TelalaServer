@@ -26,7 +26,8 @@ namespace DAL
                     detail = str,
                     createTime = DateTime.Now,
                     user =username,
-                    userId = userid
+                    userId = userid,
+                    isdel=0
                 };
                 edm.customerinfo.Add(model);
                 edm.SaveChanges();
@@ -37,15 +38,37 @@ namespace DAL
         {
             using (var edm = new appEntities())
             {
-                return edm.customerinfo.OrderByDescending(p => p.id).Skip((page - 1) * size).Take(size).ToList();
+                return edm.customerinfo.Where(p=>p.isdel==0).OrderByDescending(p => p.id).Skip((page - 1) * size).Take(size).ToList();
             }
         }
-
-        public int GetCount()
+        public List<customerinfo> GetListByUser(int userid,int page = 0, int size = 100)
         {
             using (var edm = new appEntities())
             {
-                return edm.customerinfo.Count();
+                return edm.customerinfo.Where(p => p.isdel == 0 && p.userId==userid).OrderByDescending(p => p.id).Skip((page - 1) * size).Take(size).ToList();
+            }
+        }
+
+        public void DelCustomer(int id)
+        {
+            using (var edm = new appEntities())
+            {
+                var model = edm.customerinfo.FirstOrDefault(p => p.id == id);
+                model.isdel = 1;
+                model.delInfo = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                edm.SaveChanges();
+            }
+        }
+
+        public int GetCount(int usr=0)
+        {
+            using (var edm = new appEntities())
+            {
+                if (usr != 0)
+                {
+                    return edm.customerinfo.Where(p => p.isdel == 0 && p.userId==usr).Count();
+                }
+                return edm.customerinfo.Where(p => p.isdel == 0).Count();
             }
         }
     }

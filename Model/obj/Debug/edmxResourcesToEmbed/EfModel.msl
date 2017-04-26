@@ -16,6 +16,8 @@
     <EntitySetMapping Name="customerinfo">
       <EntityTypeMapping TypeName="appModels.customerinfo">
         <MappingFragment StoreEntitySet="customerinfo">
+          <ScalarProperty Name="delInfo" ColumnName="delInfo" />
+          <ScalarProperty Name="isdel" ColumnName="isdel" />
           <ScalarProperty Name="userId" ColumnName="userId" />
           <ScalarProperty Name="user" ColumnName="user" />
           <ScalarProperty Name="detail" ColumnName="detail" />

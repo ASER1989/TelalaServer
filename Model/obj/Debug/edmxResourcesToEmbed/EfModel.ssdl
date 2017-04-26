@@ -18,6 +18,8 @@
     <Property Name="detail" Type="varchar" MaxLength="5000" />
     <Property Name="user" Type="varchar" MaxLength="50" />
     <Property Name="userId" Type="int" />
+    <Property Name="isdel" Type="int" />
+    <Property Name="delInfo" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="users">
     <Key>

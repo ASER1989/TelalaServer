@@ -28,5 +28,7 @@ namespace Model
         public string detail { get; set; }
         public string user { get; set; }
         public Nullable<int> userId { get; set; }
+        public Nullable<int> isdel { get; set; }
+        public string delInfo { get; set; }
     }
 }
