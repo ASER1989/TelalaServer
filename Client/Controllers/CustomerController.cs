@@ -32,9 +32,14 @@ namespace Client.Controllers
             return _Json(null,0, "操作成功");
         }
 
-        [Login(type="admin")]
+        [Login]
         public ActionResult GetList(int page = 1, int size = 100)
         {
+            if (UserState.UserType != 0)
+            {
+                return Redirect("GetListBuyUser?page="+page+"&size="+size);
+            }
+
             try
             {
                 var bll = new Customer();

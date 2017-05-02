@@ -30,44 +30,5 @@ namespace Client
             }
         }
     }
-
-    //public class CmsLoginAttribute : ActionFilterAttribute
-    //{
-    //    public override void OnActionExecuting(ActionExecutingContext filterContext)
-    //    {
-    //        base.OnActionExecuting(filterContext);
-
-    //        int userid = UserState.SysUserID;
-    //        if (userid <= 0)
-    //        {
-    //            if (!_requstLogin(filterContext))
-    //            {
-    //                filterContext.HttpContext.Response.Redirect("/Cms/NoLogin");
-    //                filterContext.Result = new ContentResult();
-    //            }
-
-    //        }
-    //    }
-
-    //    private bool _requstLogin(ActionExecutingContext filterContext)
-    //    {
-    //        string openid = filterContext.RequestContext.HttpContext.Request["openid"];
-    //        string passport = filterContext.RequestContext.HttpContext.Request["passport"];
-
-    //        if (openid == null || openid.Trim() == "" || passport == null || passport == "")
-    //        {
-    //            return false;
-    //        }
-
-    //        //var res = new AdminBLL().OpenLogin(openid.ToLower(), passport.ToLower());
-    //        //if (res != null)
-    //        //{
-    //        //    UserState.SysUserID = res.ID;
-    //        //    UserState.UserName = res.Name;
-    //        //    return true;
-    //        //}
-
-    //        return false;
-    //    }
-    //} 
+     
 }
